@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+
+body {
+  @apply bg-gray-50 text-gray-800 font-sans;
+}
+
+a {
+  @apply text-indigo-600 hover:text-indigo-500;
+}
+
+input:focus, textarea:focus, select:focus {
+  @apply outline-none ring-2 ring-indigo-400;
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Override input autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #1f2937 !important; /* text-gray-800 */
+}
